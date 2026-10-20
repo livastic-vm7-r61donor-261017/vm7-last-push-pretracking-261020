@@ -1,0 +1,13 @@
+merge_protections_settings:
+  reporting_method: check-runs
+  post_comment: true
+  auto_merge_conditions:
+    - title = VM7_LAST_PUSH_PRETRACKING_TRIGGER_261020
+
+merge_protections:
+  - name: VM7 last-push pretracking transition gate 261020
+    if:
+      - base = main
+      - title = VM7_LAST_PUSH_PRETRACKING_TRIGGER_261020
+    success_conditions:
+      - github-require-last-push-approval
